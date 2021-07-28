@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     var user2 = User();
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +25,20 @@ class MainActivity : AppCompatActivity() {
         initCount()
 
         initPrintUserName()
+
+        initPrintObject()
+
+    }
+
+    object ObjectName
+  fun initPrintObject() {
+
+        var btnPrintObject = findViewById<Button>(R.id.buttonObject)
+        var textViewObject = findViewById<TextView>(R.id.textObject)
+
+      btnPrintObject.setOnClickListener(){
+          textViewObject.text = ObjectName.toString()
+      }
 
     }
 
