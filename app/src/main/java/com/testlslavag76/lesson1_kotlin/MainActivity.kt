@@ -13,22 +13,23 @@ class MainActivity : AppCompatActivity() {
 
     var count: Int = 0
     var user1 = User("Jone", "Smith")
-    var user2 = User();
+    var user2 = User(); //создание объекта в конструкторе по умолчанию
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initCount()
+        initCount() //вызов функции счетчика
 
-        initPrintUserName()
+        initPrintUserName() //вызов функции вывода объектов из data-класса
 
-        initPrintObject()
+        initPrintObject() //вызов функции создания и вывода объекта
 
     }
 
     object ObjectName
+
     fun initPrintObject() {
 
         var btnPrintObject = findViewById<Button>(R.id.buttonObject)
