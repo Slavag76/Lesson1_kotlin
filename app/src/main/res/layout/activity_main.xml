@@ -8,10 +8,10 @@
 
     <Button
         android:id="@+id/button"
-        android:onClick="toastMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:onClick="toastMe"
         android:text="Toast Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -30,7 +30,6 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-
         android:id="@+id/countButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,5 +39,40 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/user1TextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name user1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/user2TextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=" Name user2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user1TextField" />
+
+    <Button
+        android:id="@+id/buttonPrintUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PrintUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user2TextField" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

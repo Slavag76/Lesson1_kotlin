@@ -12,11 +12,30 @@ class MainActivity : AppCompatActivity() {
 
 
     var count: Int = 0
+    var user1 = User("Jone", "Smith")
+    var user2 = User();
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initCount()
+
+        initPrintUserName()
+
+    }
+
+    fun initPrintUserName() {
+        var btnPrintUser = findViewById<Button>(R.id.buttonPrintUserName)
+        var textViewUser1 = findViewById<TextView>(R.id.user1TextField)
+        var textViewUser2 = findViewById<TextView>(R.id.user2TextField)
+
+        btnPrintUser.setOnClickListener() {
+            textViewUser1.text = user1.firstName + user1.secondName
+            textViewUser2.text = user2.firstName + user2.secondName
+
+        }
     }
 
     fun toastMe(view: View) {
